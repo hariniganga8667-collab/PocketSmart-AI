@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Interior Planner | PocketSmart AI</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <main class="hero">
+        <div class="hero-content">
+
+            <p class="tagline">POCKETSMART AI</p>
+
+            <h1>🏠 Home Interior Planner</h1>
+
+            <p class="description">
+                Tell us about your space and budget.
+                PocketSmart AI will help you plan it smartly.
+            </p>
+
+            <form class="planner-form" action="/generate-home" method="post">
+
+                <label for="budget">Your Budget (₹)</label>
+
+                <input
+                    type="number"
+                    id="budget"
+                    name="budget"
+                    placeholder="Example: 50000"
+                    required
+                >
+
+                <label for="room">Room Type</label>
+
+                <select id="room" name="room" required>
+                    <option value="">Select a room</option>
+                    <option value="Living Room">Living Room</option>
+                    <option value="Bedroom">Bedroom</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Dining Room">Dining Room</option>
+                    <option value="Full Home">Full Home</option>
+                </select>
+
+                <label for="items">What do you need?</label>
+
+                <textarea
+                    id="items"
+                    name="items"
+                    rows="5"
+                    placeholder="Example: 2 ceiling fans, 4 lights, sofa, dining table..."
+                    required
+                ></textarea>
+
+                <label for="style">Preferred Style</label>
+
+                <select id="style" name="style">
+                    <option value="Modern">Modern</option>
+                    <option value="Minimalist">Minimalist</option>
+                    <option value="Traditional">Traditional</option>
+                    <option value="Elegant">Elegant</option>
+                    <option value="Budget Friendly">Budget Friendly</option>
+                </select>
+
+                <button type="submit">
+                    Generate Recommendations
+                </button>
+
+            </form>
+
+        </div>
+    </main>
+
+</body>
+</html>
